@@ -1,0 +1,11 @@
+import 'package:almohsen_s_application12/widgets/app_bar/custom_app_bar.dart';import 'package:almohsen_s_application12/widgets/app_bar/appbar_leading_iconbutton.dart';import 'package:almohsen_s_application12/widgets/app_bar/appbar_trailing_iconbutton_two.dart';import 'package:almohsen_s_application12/presentation/messages_list_page/messages_list_page.dart';import 'package:flutter/material.dart';import 'package:almohsen_s_application12/core/app_export.dart';import 'controller/notification_list_tab_container_controller.dart';class NotificationListTabContainerScreen extends GetWidget<NotificationListTabContainerController> {const NotificationListTabContainerScreen({Key? key}) : super(key: key);
+
+@override Widget build(BuildContext context) { return SafeArea(child: Scaffold(appBar: _buildAppBar(), body: SizedBox(width: double.maxFinite, child: Column(children: [SizedBox(height: 17.v), _buildTabview(), Expanded(child: SizedBox(height: 690.v, child: TabBarView(controller: controller.tabviewController, children: [MessagesListPage(), MessagesListPage()])))])))); } 
+/// Section Widget
+PreferredSizeWidget _buildAppBar() { return CustomAppBar(leadingWidth: 74.h, leading: AppbarLeadingIconbutton(imagePath: ImageConstant.imgArrowLeft, margin: EdgeInsets.only(left: 24.h, top: 3.v, bottom: 3.v), onTap: () {onTapArrowLeft();}), actions: [AppbarTrailingIconbuttonTwo(imagePath: ImageConstant.imgThumbsUp, margin: EdgeInsets.symmetric(horizontal: 24.h, vertical: 3.v))]); } 
+/// Section Widget
+Widget _buildTabview() { return Container(height: 50.v, width: 327.h, decoration: BoxDecoration(color: appTheme.gray100, borderRadius: BorderRadius.circular(25.h)), child: TabBar(controller: controller.tabviewController, labelPadding: EdgeInsets.zero, labelColor: appTheme.blueGray80001, labelStyle: TextStyle(fontSize: 14.fSize, fontFamily: 'Raleway', fontWeight: FontWeight.w600), unselectedLabelColor: theme.colorScheme.onPrimaryContainer, unselectedLabelStyle: TextStyle(fontSize: 14.fSize, fontFamily: 'Raleway', fontWeight: FontWeight.w600), indicatorPadding: EdgeInsets.all(9.0.h), indicator: BoxDecoration(color: appTheme.whiteA700, borderRadius: BorderRadius.circular(16.h)), tabs: [Tab(child: Text("lbl_listing".tr)), Tab(child: Text("lbl_history".tr))])); } 
+
+/// Navigates to the previous screen.
+onTapArrowLeft() { Get.back(); } 
+ }

@@ -1,0 +1,5 @@
+import '../../../core/app_export.dart';import 'topagentsprofiledetail_item_model.dart';/// This class defines the variables used in the [top_agents_profile_detail_page],
+/// and is typically used to hold data that is passed between different parts of the application.
+class TopAgentsProfileDetailModel {Rx<List<TopagentsprofiledetailItemModel>> topagentsprofiledetailItemList = Rx([TopagentsprofiledetailItemModel(brookvaleVilla:ImageConstant.imgShape17.obs,price: " 320".obs,month: "/month".obs,brookvaleVilla1: "Brookvale Villa".obs,image:ImageConstant.imgSignalOrange3009x9.obs,text: "5".obs,jakartaIndonesia: "Jakarta, Indonesia".obs),TopagentsprofiledetailItemModel(brookvaleVilla:ImageConstant.imgShape18.obs,price: " 290".obs,month: "/month".obs,brookvaleVilla1: "The Overdale ".obs),TopagentsprofiledetailItemModel(brookvaleVilla:ImageConstant.imgShape17.obs,price: " 320".obs,month: "/month".obs,brookvaleVilla1: "Brookvale Villa".obs),TopagentsprofiledetailItemModel(brookvaleVilla:ImageConstant.imgShape18.obs,price: " 290".obs,month: "/month".obs,brookvaleVilla1: "The Overdale ".obs)]);
+
+ }

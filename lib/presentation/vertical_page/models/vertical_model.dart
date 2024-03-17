@@ -1,0 +1,5 @@
+import '../../../core/app_export.dart';import 'estatescardvertical_item_model.dart';/// This class defines the variables used in the [vertical_page],
+/// and is typically used to hold data that is passed between different parts of the application.
+class VerticalModel {Rx<List<EstatescardverticalItemModel>> estatescardverticalItemList = Rx([EstatescardverticalItemModel(theLaurelsVilla:ImageConstant.imgShape30.obs,price: " 320".obs,month: "/night".obs,theLaurelsVilla1: "The Laurels Villa".obs,image:ImageConstant.imgSignalOrange3009x9.obs,text: "4.9".obs,baliIndonesia: "Bali, Indonesia".obs),EstatescardverticalItemModel(theLaurelsVilla:ImageConstant.imgShape160x144.obs,price: " 220".obs,month: "/month".obs,theLaurelsVilla1: "Wings Tower".obs,image:ImageConstant.imgSignalOrange300.obs,text: "4.9".obs,baliIndonesia: "Jakarta, Indonesia".obs),EstatescardverticalItemModel(theLaurelsVilla:ImageConstant.imgShape160x144.obs,price: " 220".obs,month: "/month".obs,theLaurelsVilla1: "Wings Tower".obs,image:ImageConstant.imgSignalOrange3009x9.obs,text: "4.9".obs,baliIndonesia: "Jakarta, Indonesia".obs)]);
+
+ }

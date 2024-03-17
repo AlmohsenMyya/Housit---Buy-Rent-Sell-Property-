@@ -1,0 +1,5 @@
+import '../../../core/app_export.dart';import 'horizontal_item_model.dart';/// This class defines the variables used in the [horizontal_screen],
+/// and is typically used to hold data that is passed between different parts of the application.
+class HorizontalModel {Rx<List<HorizontalItemModel>> horizontalItemList = Rx([HorizontalItemModel(image:ImageConstant.imgShape140x126.obs,baliBeachviewVilla: "Bali Beachview Villa".obs,image1:ImageConstant.imgSignalYellow700.obs,text: "4.2 ".obs,baliIndonesia: "Bali, Indonesia".obs,price: " 420".obs,month: "/month".obs),HorizontalItemModel(image:ImageConstant.imgShape20.obs,baliBeachviewVilla: "Wings Tower".obs,image1:ImageConstant.imgSignalYellow7009x9.obs,text: "4.9 ".obs,baliIndonesia: "Jakarta, Indonesia".obs,price: " 220".obs,month: "/month".obs),HorizontalItemModel(image:ImageConstant.imgShape31.obs,baliBeachviewVilla: "Wayside Modern House".obs,image1:ImageConstant.imgSignalYellow7009x9.obs,text: "4.4".obs,baliIndonesia: "Semarang, Indonesia".obs,price: " 220".obs,month: "/month".obs)]);
+
+ }

@@ -1,0 +1,80 @@
+import '../models/propertyfeatureslist_item_model.dart';
+import '../controller/extra_information_controller.dart';
+import 'package:almohsen_s_application12/widgets/custom_icon_button.dart';
+import 'package:flutter/material.dart';
+import 'package:almohsen_s_application12/core/app_export.dart';
+
+// ignore: must_be_immutable
+class PropertyfeatureslistItemWidget extends StatelessWidget {
+  PropertyfeatureslistItemWidget(
+    this.propertyfeatureslistItemModelObj, {
+    Key? key,
+  }) : super(
+          key: key,
+        );
+
+  PropertyfeatureslistItemModel propertyfeatureslistItemModelObj;
+
+  var controller = Get.find<ExtraInformationController>();
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment.center,
+      child: Container(
+        padding: EdgeInsets.symmetric(
+          horizontal: 15.h,
+          vertical: 20.v,
+        ),
+        decoration: AppDecoration.fillGray.copyWith(
+          borderRadius: BorderRadiusStyle.circleBorder12,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 7.v),
+              child: Obx(
+                () => Text(
+                  propertyfeatureslistItemModelObj.bedroom!.value,
+                  style: CustomTextStyles.labelLargeSemiBold,
+                ),
+              ),
+            ),
+            Spacer(),
+            CustomIconButton(
+              height: 30.adaptSize,
+              width: 30.adaptSize,
+              child: CustomImageView(
+                imagePath: ImageConstant.imgCloseOnprimarycontainer,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                left: 18.h,
+                top: 8.v,
+                bottom: 2.v,
+              ),
+              child: Obx(
+                () => Text(
+                  propertyfeatureslistItemModelObj.text!.value,
+                  style: CustomTextStyles.titleMedium16,
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 19.h),
+              child: CustomIconButton(
+                height: 30.adaptSize,
+                width: 30.adaptSize,
+                child: CustomImageView(
+                  imagePath: ImageConstant.imgCloseOnprimarycontainer,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
